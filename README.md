@@ -49,7 +49,7 @@ Things you may want to cover:
 |------|----|-------|
 |text|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
-|tweet_id|integer|null: false, foreign_key: true|
+|task_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :task
 - belongs_to :user
