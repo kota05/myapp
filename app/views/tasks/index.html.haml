@@ -5,6 +5,15 @@
       %input.header__search--box--btn{"name": "commit", "type": "submit", "value": "search"}
   .header__icon
   .header__box
+    %h3.header__box--name
+      = current_user.name
+    %ul.header__box--iconList
+      %li.header__box--icon
+        = link_to '#' do
+          = icon('fas', 'edit')
+      %li.header__box--icon
+        =link_to edit_user_path(current_user) do
+          = icon('fas', 'cog')
 
 .wrapper
   .main
