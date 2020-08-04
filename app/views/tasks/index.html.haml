@@ -14,24 +14,9 @@
       %li.header__box--icon
         =link_to edit_user_path(current_user) do
           = icon('fas', 'cog')
-
+          
 .wrapper
-  .main
-    .main__task
-      .main__task--box
-        .main__task--box--input
-          ○○さんに○○の件でメールを送る。
-      .main__task--box
-        .main__task--box--input
-          ○○さんに○○の件でメールを送る。
-      .main__task--box
-        .main__task--box--input
-          ○○さんに○○の件でメールを送る。
-    .main__form
-      %form.main__form--box
-        %input.main__form--box--text{"placeholder": "Why,Who,What,Where,When,How", "type": "text"}
-        %input.main__form--box--btn{"name": "commit", "type": "submit", "value": "POST"}
-  .side
-    .side__box
-      .side__box--calendar
-      .side__box--calendar
+  = render "main"
+  = render "side"
+
+
