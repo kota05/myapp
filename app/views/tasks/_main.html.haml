@@ -1,0 +1,11 @@
+.main
+  .main__task
+    = render @task
+  .main__form
+    = form_with model: [@task], html: {class: "Form"}, local: true do |f|
+      .main__form--box
+        = f.text_field :content, class: 'Form__text', placeholder: "Why,Who,What,Where,When,How"
+        = f.label :image, class: 'Form__image' do
+          = icon('far', 'image', class: 'Form__imageIcon')
+          = f.file_field :image, class: 'Hidden'
+      = f.submit 'POST', class: 'Form__btn'

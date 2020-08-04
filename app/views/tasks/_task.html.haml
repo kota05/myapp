@@ -1,0 +1,8 @@
+.main__task--box
+  .main__task--box--nameBox
+    .main__task--box--nameBox--acount
+    .main__task--box--nameBox--date
+  .main__task--box--input
+    - if task.content.present?
+      .main__task--box--input--output
+        = task.content
